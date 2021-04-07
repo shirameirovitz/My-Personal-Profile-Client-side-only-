@@ -1,14 +1,19 @@
 import React from "react";
-import { BrowserRouter, Switch, useLocation } from "react-router-dom";
+import Profile from "./components/Profile";
+import Login from "./components/Login";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
-  <BrowserRouter>
-    <Switch>
-      <Route exact path="/" component={Login} />
-      <Route exact path="/profile" component={Profile} />
-    </Switch>
-  </BrowserRouter>;
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route exact path="/profile" component={Profile} />
+        </Switch>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
