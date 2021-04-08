@@ -14,11 +14,19 @@ function Login() {
       setShowOrHide("show");
     }
   };
-
+  const submitLogin = (e) => {
+    if (
+      userRef.current.value !== "shirameirovitz" ||
+      passwordRef.current.value !== "shira1999"
+    ) {
+      alert("Username or Password are incorrect!");
+      e.preventDefault();
+    }
+  };
   return (
     <div>
       <h1>Login</h1>
-      <form>
+      <form action="/profile" onSubmit={(e) => submitLogin(e)}>
         <input placeholder="UserName" ref={userRef} />
         <input type="password" placeholder="Password" ref={passwordRef} />
         <button type="button" onClick={visibility}>
