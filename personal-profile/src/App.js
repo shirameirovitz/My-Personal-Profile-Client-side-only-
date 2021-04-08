@@ -1,7 +1,7 @@
-import React from "react";
-import Profile from "./components/Profile";
-import Login from "./components/Login";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import React from 'react';
+import Profile from './components/Profile';
+import Login from './components/Login';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (

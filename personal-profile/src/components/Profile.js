@@ -1,12 +1,11 @@
-import React from "react"
+import React from 'react';
+import Context from './contextTheme/Context.js';
+import { ThemeProvider } from './contextTheme/ThemeContext.js';
 
-function Profile(){
-    return;
+export default function Profile() {
+  return (
+    <ThemeProvider>
+      <Context />
+    </ThemeProvider>
+  );
 }
-
-
-export default Profile
-
-
-
-// {theme === 'light'? '🌞' : '🔅'}
